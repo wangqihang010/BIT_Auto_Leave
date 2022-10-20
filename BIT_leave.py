@@ -117,7 +117,7 @@ if __name__ == "__main__":
     qj_data = {"QJXZ_DISPLAY":"因公请假","QJXZ":"2","QJLX_DISPLAY":"2022秋季学期进出校","QJLX":"ba4a95d3aaa6497f9d042ff7ef0989b2","SQSM":"","QJKSRQ":"","QJJSRQ":"","QJTS":1,"YL1_DISPLAY":"科研需求","YL1":"2dafc849555e4de7913b674279633df0","YL2":"","YL3":"国防科技园","YL4_DISPLAY":"单车/摩托车","YL4":"2","YL5":"2022-09-29 06:00:00","YL6":"2022-09-29 23:00:00","YL7_DISPLAY":"否","YL7":"0","YL8":"","QJSY":"前往国防科技园","ZMCL":"","SJH":str(telephone),"SQBH":"","XSBH":"","QJRQ":"2022-09-29","BEGINDATE":"2022-09-29"}
     now_time = datetime.datetime.now()
     qj_data["YL5"] = (now_time + datetime.timedelta(days=+1)).strftime("%Y-%m-%d 06:00:00")
-    qj_data["YL6"] = (now_time + datetime.timedelta(days=+1)).strftime("%Y-%m-%d 23:30:00")
+    qj_data["YL6"] = (now_time + datetime.timedelta(days=+1)).strftime("%Y-%m-%d 23:59:00")
     qj_data["QJRQ"] = str((now_time + datetime.timedelta(days=+1))).split(' ')[0]
     qj_data["BEGINDATE"] = qj_data["QJRQ"]
     print(qj_data)
